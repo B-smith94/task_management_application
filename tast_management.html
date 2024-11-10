@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Task Management Application</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="#home">home</a></li>
+                    <li><a href="#dashboard">Task Dashboard</a></li>
+                    <li><a href="#details">Task Details</a></li>
+                    <li><a href="#taskCreate">Add a Task</a></li>
+                    <li><a href="#register">Register an Account</a></li>
+                    <li><a href="#authentication">Login</a></li>
+                </ul>
+            </nav>
+            <h1>Task Management Application</h1>
+        </header>
+        <section id="home">
+            <h2>Key Features</h2>
+            <div>
+                <div><h3>Create a Task</h3></div>
+                <div><h3>Mark a Task as Complete</h3></div>
+                <div><h3>View and Organize Your Tasks</h3></div>
+            </div>
+        </section>
+        <section id="dashboard">
+            <div>
+                <!--Create Cards and Forms for Completing, Editing, and Changing a Task-->
+            </div>
+        </section>
+        <section id="details">
+            <div>
+                <!--Use Cards and Forms for Viewing Different Tasks-->
+            </div>
+        </section>
+        <section id="taskCreate">
+            <h2>Add a Task</h2>
+            <form>
+                <label for="task">Task</label>
+                <textarea name="task" id="task" placeholder="Enter the Task Details" required></textarea>
+                
+                <label for="startDate">Task Start Date: </label>
+                <input type="date" id="startDate" name="startDate" required>
+
+                <label for="endDate">Task End Date: </label>
+                <input type="date" id="endDate" name="endDate">
+
+                <button type="submit">Add Task</button>
+            </form>
+        </section>
+        <section id="register">
+            <h2>Register an Account</h2>
+            <form>
+                <label for="nameFirst">First Name</label>
+                <input type="text" id="nameFirst" name="nameFirst" placeholder="Enter your first name" required>
+
+                <label for="nameLast">last Name</label>
+                <input type="text" id="nameLast" name="nameLast" placeholder="Enter your last name" required>
+
+                <label for="initial">Middle Initial</label>
+                <input type="text" id="initial" name="middleInitial">
+
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Enter a Username" required>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter a Password" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your Email Address" required>
+
+                <button type="submit">Register</button>
+            </form>
+        </section>
+        <section id="authentication">
+            <h2>Login</h2>
+            <form>
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Enter a Username" required>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter a Password" required>
+
+                <button type="submit">Login</button>
+            </form>
+        </section>
+    </body>
+</html>
