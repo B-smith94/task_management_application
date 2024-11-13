@@ -38,53 +38,37 @@
                 </div>
             </div>
         </nav>
-        <header class="bg-primary">
+        <header class="bg-primary p-5">
             <h1 class="text-center text-light">Task Management Application</h1>
             <p class="text-center text-light">Welcome to the Task Managament Application!</p>
         </header>
-        <section id="details" class="container-fluid my-5 bg-info text-light border-primary p-2">
+        <section id="details" class="container-fluid bg-info text-light border-primary p-2">
             <h3>Task Details</h3>
             <div class="row g-4 mx-auto">
                 <!--Use Cards and Forms for Viewing and Editing Different Tasks-->
-                <article class="col-12 col-md-4 mb-3 text-dark">
+                <article class="col-12 mb-3 text-dark">
                     <div class="card">
                         <div class="card-header collapsed">
-                            <h3>View Task Details</h3>
+                            <h3>Task Details</h3>
                         </div>
                         <div class="card-body p-2">
                             <div class="card-title h4">Select the Task You Wish to View</div>
                             <form>
-                                <label for="task">Task</label>
-                                <select name="tasks" id="task">
-                                    <option value="task1">Task 1</option>
-                                    <option value="task2">Task 2</option>
-                                    <option value="task3">Task 3</option>
-                                </select>
-                                
-                                <button type="submit">View Details</button>
+                                <div class="form-floating">
+                                    <select class="form-select" name="tasks" id="task">
+                                        <option selected="">Choose a Task</option>
+                                        <option value="task1">Task 1</option>
+                                        <option value="task2">Task 2</option>
+                                        <option value="task3">Task 3</option>
+                                    </select>
+                                    <label for="task">Task</label>
+                                </div>
+                                <button class="btn btn-primary mt-2" type="submit">View Details</button>
+                                <button class="btn btn-success mt-2" type="submit">Mark as Complete</button>
                             </form>
                         </div>
                     </div>  
                 </article>
-                <article class="col-12 col-md-4 mb-3 text-dark">
-                    <div class="card">
-                        <div class="card-header collapsed">
-                            <h3>Mark Task as Complete</h3>
-                        </div>
-                        <div class="card-body p-2">
-                            <div class="card-title h4">Select the Task To Complete</div>
-                            <form>
-                                <label for="task">Task</label>
-                                <select name="tasks" id="task">
-                                    <option value="task1">Task 1</option>
-                                    <option value="task2">Task 2</option>
-                                    <option value="task3">Task 3</option>
-                                </select>
-                                
-                                <label for="complete">Mark as Complete</label>
-                                <input type="radio" id="complete" name="complete" value="yes">
-                                
-                                <button type="submit">Complete</button>
                             </form>
                         </div>
                     </div>  
