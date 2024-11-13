@@ -44,19 +44,25 @@
         </header>
         <section id="taskCreate">
             <h2>Add a Task</h2>
-            <form>
+            <form class="form-group needs-validation" novalidate>
                 <div class="ms-2 me-2 form-floating">
                     <textarea class="form-control" name="task" id="task" placeholder="Enter the Task Details" required></textarea>
                     <label class="form-label" for="task">Enter the Task Details</label>
+                    <div class="valid-feedback">Looks good!</div>
+                    <div class="invalid-feedback">Please enter in task details.</div>
                 </div>
                 <div class="row">
                     <div class="col mt-1 ms-2 form-floating">   
                         <input class="form-control" type="date" id="startDate" name="startDate" required>
                         <label class="ms-2" for="startDate">Task Start Date: </label>
+                        <div class="valid-feedback">Looks good!</div>
+                        <div class="invalid-feedback">Please enter the task start date.</div>
                     </div> 
                     <div class="col mt-1 ms-1 me-2 form-floating">
                         <input class="form-control" type="date" id="endDate" name="endDate">
                         <label class="ms-2" for="endDate">Task End Date: </label>
+                        <div class="valid-feedback">Looks good!</div>
+                        <div class="invalid-feedback">Please enter in the task end date.</div>
                 </div>
                 </div>
                     
@@ -67,5 +73,22 @@
         <footer class="bg-dark p-3">
             <p class="text-white text-center">&copy;Task Management, Co. All Rights Reserved.</p>
         </footer>
+        <script>
+            (function() {
+              'use strict';
+              window.addEventListener('load', function() {
+                var forms = document.getElementsByClassName('needs-validation');
+                var validation = Array.prototype.filter.call(forms, function(form) {
+                  form.addEventListener('submit', function(event) {
+                    if (form.checkValidity() === false) {
+                      event.preventDefault();
+                      event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                  }, false);
+                });
+              }, false);
+            })();
+        </script>
     </body>
 </html>
