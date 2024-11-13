@@ -45,51 +45,58 @@
         <section id="register" class="mt-2 p-3 bg-light rounded">
             <h2>Register an Account</h2>
             <form>
-                <div class="row">
-                    <div class="col">
-                        <label for="nameFirst">First Name</label>
-                        <input type="text" id="nameFirst" name="nameFirst" placeholder="Enter your first name" required>
+                <div class="row mb-2">
+                    <div class="col-sm-4 form-floating">
+                        <input class="form-control" type="text" id="nameFirst" name="nameFirst" placeholder="Enter your first name" required>
+                        <label class="ms-2" for="nameFirst">First Name</label>
                     </div>
-                    <div class="col">
-                        <label for="nameLast">last Name</label>
-                        <input type="text" id="nameLast" name="nameLast" placeholder="Enter your last name" required>
+                    <div class="col-sm-5 form-floating">
+                        <input class="form-control" type="text" id="nameLast" name="nameLast" placeholder="Enter your last name" required>
+                        <label class="ms-2" for="nameLast">Last Name</label>
                     </div>
-                    <div class="col">
-                        <label for="initial">Middle Initial</label>
-                        <input type="text" id="initial" name="middleInitial">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <label for="username">Username</label>
-                        <input type="text" id="username" name="username" placeholder="Enter a Username" required>
-                    </div>
-                    <div class="col">
-                        <label for="password">Password</label>
-                        <input type="password" id="password" name="password" placeholder="Enter a Password" required>
+                    <div class="col-sm-3 form-floating">
+                        <input class="form-control" type="text" name="middleInitial" id="initial" placeholder="Enter your Middle Initial">
+                        <label class="ms-2" for="initial">Middle initial</label>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" placeholder="Enter your Email Address" required>
+                <div class="row mb-2">
+                    <div class="col-sm form-floating">
+                        <input class="form-control" type="text" id="username" name="username" placeholder="Enter a Username" required>
+                        <label class="ms-2" for="username">Username</label>
+                    </div> 
+                    <div class="col-sm form-floating">
+                        <input class="form-control" type="password" id="password" name="password" placeholder="Enter a Password" required>
+                        <label class="ms-2" for="password">Password</label>
                     </div>
-                    <div class="col">
-                        <label for="phone">Phone Number</label>
-                        <input type="tel" name="phone" id="phone" placeholder="Enter your Phone Number (optional)">
+                </div>
+                <div class="row mb-2">
+                    <div class="col-sm form-floating">
+                        <input class="form-control" type="email" id="email" name="email" placeholder="Enter your Email Address" required>
+                        <label class="ms-2" for="email">Email</label>
                     </div>
-                    <div class="row">
-                        <label>Preferred Contact Method:</label>
-                        <div class="col">
-                            <input type="radio" name="email" id="email" value="Email">
-                            <label for="email">Email</label><br>
-                            <input type="radio" name="phone" id="phone" value="Phone">
-                            <label for="phone">Phone</label><br>
-                        </div>
+                    <div class="col-sm form-floating">
+                        <input class="form-control" type="tel" name="phone" id="phone" placeholder="Enter your Phone Number (optional)">
+                        <label class="ms-2" for="phone">Phone Number</label>
+                    </div>
+                </div>
+                <label>Preferred Contact Method:</label>
+                <div class="row mb-2">
+                    <div class="col-3 ms-2form-check">
+                        <input class="form-check-input" type="radio" name="email" id="email" value="Email">
+                        <label claas="form-check-label" for="email">Email</label>
+                    </div>
+                    <div class="col-3 form-check">    
+                        <input class="form-check-input" type="radio" name="phone" id="phone" value="Phone">
+                        <label class="form-check-label" for="phone">Phone</label>
+                    </div>
+                    <div class="col-3 form-check">
+                        <input class="form-check-input" type="radio" name="nopref" id="nopref">
+                        <label class="form-check-label" for="nopref">No Preference</label>
                     </div>
                 </div>
                 <button class="btn btn-primary" type="submit">Register</button>
                 <button class="btn btn-secondary" type="reset">Reset</button>
+                </div>
             </form>
         </section>
         <footer class="bg-dark p-3">
