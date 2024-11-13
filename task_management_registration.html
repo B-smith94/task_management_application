@@ -44,39 +44,52 @@
         </header>
         <section id="register" class="mt-2 p-3 bg-light rounded">
             <h2>Register an Account</h2>
-            <form>
+            <form class="form-group needs-validation" novalidate>
                 <div class="row mb-2">
                     <div class="col-sm-4 form-floating">
                         <input class="form-control" type="text" id="nameFirst" name="nameFirst" placeholder="Enter your first name" required>
                         <label class="ms-2" for="nameFirst">First Name</label>
+                        <div class="valid-feedback">Looks good!</div>
+                        <div class="invalid-feedback">Please enter your first name.</div>
                     </div>
                     <div class="col-sm-5 form-floating">
                         <input class="form-control" type="text" id="nameLast" name="nameLast" placeholder="Enter your last name" required>
                         <label class="ms-2" for="nameLast">Last Name</label>
+                        <div class="valid-feedback">Looks good!</div>
+                        <div class="invalid-feedback">Please enter your last name.</div>
                     </div>
                     <div class="col-sm-3 form-floating">
                         <input class="form-control" type="text" name="middleInitial" id="initial" placeholder="Enter your Middle Initial">
                         <label class="ms-2" for="initial">Middle initial</label>
+                        <div class="valid-feedback">Looks good!</div>
                     </div>
                 </div>
                 <div class="row mb-2">
                     <div class="col-sm form-floating">
                         <input class="form-control" type="text" id="username" name="username" placeholder="Enter a Username" required>
                         <label class="ms-2" for="username">Username</label>
+                        <div class="valid-feedback">Looks good!</div>
+                        <div class="invalid-feedback">Please enter a valid username.</div>
                     </div> 
                     <div class="col-sm form-floating">
                         <input class="form-control" type="password" id="password" name="password" placeholder="Enter a Password" required>
                         <label class="ms-2" for="password">Password</label>
+                        <div class="valid-feedback">Looks good!</div>
+                        <div class="invalid-feedback">Please enter a valid password.</div>
                     </div>
                 </div>
                 <div class="row mb-2">
                     <div class="col-sm form-floating">
                         <input class="form-control" type="email" id="email" name="email" placeholder="Enter your Email Address" required>
                         <label class="ms-2" for="email">Email</label>
+                        <div class="valid-feedback">Looks good!</div>
+                        <div class="invalid-feedback">Please enter a valid email.</div>
                     </div>
                     <div class="col-sm form-floating">
                         <input class="form-control" type="tel" name="phone" id="phone" placeholder="Enter your Phone Number (optional)">
                         <label class="ms-2" for="phone">Phone Number</label>
+                        <div class="valid-feedback">Looks good!</div>
+                        <div class="invalid-feedback">Please enter a valid phone number.</div>
                     </div>
                 </div>
                 <label>Preferred Contact Method:</label>
