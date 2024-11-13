@@ -45,16 +45,23 @@
         <section id="taskCreate">
             <h2>Add a Task</h2>
             <form>
-                <label for="task">Task</label>
-                <textarea name="task" id="task" placeholder="Enter the Task Details" required></textarea>
-                
-                <label for="startDate">Task Start Date: </label>
-                <input type="date" id="startDate" name="startDate" required>
-
-                <label for="endDate">Task End Date: </label>
-                <input type="date" id="endDate" name="endDate">
-
-                <button type="submit">Add Task</button>
+                <div class="ms-2 me-2 form-floating">
+                    <textarea class="form-control" name="task" id="task" placeholder="Enter the Task Details" required></textarea>
+                    <label class="form-label" for="task">Enter the Task Details</label>
+                </div>
+                <div class="row">
+                    <div class="col mt-1 ms-2 form-floating">   
+                        <input class="form-control" type="date" id="startDate" name="startDate" required>
+                        <label class="ms-2" for="startDate">Task Start Date: </label>
+                    </div> 
+                    <div class="col mt-1 ms-1 me-2 form-floating">
+                        <input class="form-control" type="date" id="endDate" name="endDate">
+                        <label class="ms-2" for="endDate">Task End Date: </label>
+                </div>
+                </div>
+                    
+                <button class="btn btn-primary m-2" type="submit">Add Task</button>
+                <button class="btn btn-secondary mt-2 mb-2" type="reset">Reset</button>
             </form>
         </section>
         <footer class="bg-dark p-3">
