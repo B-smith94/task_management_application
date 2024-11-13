@@ -45,29 +45,72 @@
         <section id="register" class="mt-2 p-3 bg-light rounded">
             <h2>Register an Account</h2>
             <form>
-                <label for="nameFirst">First Name</label>
-                <input type="text" id="nameFirst" name="nameFirst" placeholder="Enter your first name" required>
-
-                <label for="nameLast">last Name</label>
-                <input type="text" id="nameLast" name="nameLast" placeholder="Enter your last name" required>
-
-                <label for="initial">Middle Initial</label>
-                <input type="text" id="initial" name="middleInitial">
-
-                <label for="username">Username</label>
-                <input type="text" id="username" name="username" placeholder="Enter a Username" required>
-
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" placeholder="Enter a Password" required>
-
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Enter your Email Address" required>
-
-                <button type="submit">Register</button>
+                <div class="row">
+                    <div class="col">
+                        <label for="nameFirst">First Name</label>
+                        <input type="text" id="nameFirst" name="nameFirst" placeholder="Enter your first name" required>
+                    </div>
+                    <div class="col">
+                        <label for="nameLast">last Name</label>
+                        <input type="text" id="nameLast" name="nameLast" placeholder="Enter your last name" required>
+                    </div>
+                    <div class="col">
+                        <label for="initial">Middle Initial</label>
+                        <input type="text" id="initial" name="middleInitial">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username" placeholder="Enter a Username" required>
+                    </div>
+                    <div class="col">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" placeholder="Enter a Password" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your Email Address" required>
+                    </div>
+                    <div class="col">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" name="phone" id="phone" placeholder="Enter your Phone Number (optional)">
+                    </div>
+                    <div class="row">
+                        <label>Preferred Contact Method:</label>
+                        <div class="col">
+                            <input type="radio" name="email" id="email" value="Email">
+                            <label for="email">Email</label><br>
+                            <input type="radio" name="phone" id="phone" value="Phone">
+                            <label for="phone">Phone</label><br>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-primary" type="submit">Register</button>
+                <button class="btn btn-secondary" type="reset">Reset</button>
             </form>
         </section>
         <footer class="bg-dark p-3">
             <p class="text-white text-center">&copy;Task Management, Co. All Rights Reserved.</p>
         </footer>
+        <script>
+            (function() {
+              'use strict';
+              window.addEventListener('load', function() {
+                var forms = document.getElementsByClassName('needs-validation');
+                var validation = Array.prototype.filter.call(forms, function(form) {
+                  form.addEventListener('submit', function(event) {
+                    if (form.checkValidity() === false) {
+                      event.preventDefault();
+                      event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                  }, false);
+                });
+              }, false);
+            })();
+        </script>
     </body>
 </html>
